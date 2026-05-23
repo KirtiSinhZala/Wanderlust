@@ -35,11 +35,11 @@
     
 
       <% if(currUser) {%>
-      <h4>Leave a Review</h4>
+      <h4 style="margin-bottom: 5%;">Leave a Review</h4>
 
       <form action="/listings/<%=listing.id%>/reviews" method="POST" class="needs-validation" novalidate>
    
-         <div class="col-8 offset-3"> 
+         <div class="col-8"> 
              <label for="rating" class="form-label">Rating</label>
        <fieldset class="starability-slot">
 
