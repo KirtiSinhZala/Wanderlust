@@ -19,7 +19,7 @@ const listingRoute = require("./routes/listingRoute.js");
 const reviewRoute = require("./routes/reviewRoute.js");
 const userRoute = require("./routes/userRoute.js");
 
-//const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 const dbUrl = process.env.ATLASDB_URL;
 //Atlas be conect karta listings nai dekhay kem k tene strating ma mongodb sathe initilize karyu hatu have Atlas no use karyo 6
 
@@ -31,7 +31,7 @@ main().then(() => {
      })
 
  async function main() {
-    await mongoose.connect(dbUrl); 
+    await mongoose.connect(MONGO_URL); 
 }
 
 app.set("view engine", "ejs");
